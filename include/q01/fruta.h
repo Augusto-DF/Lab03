@@ -7,7 +7,7 @@ class Fruta : public Produto
 {
 public:
 	Fruta();
-	Fruta(std::string _codigo, std::string _descricao, short _preco, 
+	Fruta(std::string _codigo, std::string _descricao, double _preco,
 			std::string _data, short _validade);
 	~Fruta();
 private:

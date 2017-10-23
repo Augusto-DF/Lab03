@@ -1,0 +1,3 @@
+001002004-22,Camisa básica,20.0,Riachuelo,0,40
+001002005-11,Camisa: Semhor(a) aceitaria fazer nosso cartão?,45.0,C&A,0,40
+001002003-66,Pano de chão costurado,97.70,Zara,1,38

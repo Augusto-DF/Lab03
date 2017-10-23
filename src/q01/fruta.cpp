@@ -3,7 +3,7 @@
 
 Fruta::Fruta() {}
 
-Fruta::Fruta(std::string _codigo, std::string _descricao, short _preco, 
+Fruta::Fruta(std::string _codigo, std::string _descricao, double _preco, 
 	std::string _data, short _validade):
 	Produto(_codigo, _descricao, _preco), m_data_lote(_data), m_validade(_validade) {}
 

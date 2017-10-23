@@ -18,7 +18,7 @@ class Bebida : public Produto {
 		 * @brief	Construtores e Destrutor
 		*/
 		Bebida();
-		Bebida(std::string _codigo, std::string _descricao, short _preco, 
+		Bebida(std::string _codigo, std::string _descricao, double _preco, 
 			double _teor);
 		~Bebida();
 

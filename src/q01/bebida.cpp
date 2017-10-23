@@ -12,7 +12,7 @@
 */
 Bebida::Bebida(){}
 
-Bebida::Bebida(std::string _codigo, std::string _descricao, short _preco, double _teor):
+Bebida::Bebida(std::string _codigo, std::string _descricao, double _preco, double _teor):
 		Produto(_codigo, _descricao, _preco),
 		teor_alcoolico(_teor) {}
 

@@ -15,7 +15,7 @@ class Produto
 	
 	public:
 		Produto();
-		Produto(std::string _codigo, std::string _descricao, short _preco);
+		Produto(std::string _codigo, std::string _descricao, double _preco);
 		virtual ~Produto();
 
 		// getters
@@ -27,7 +27,8 @@ class Produto
 		void setDescricao(std::string _descricao);
 		void setPreco(double _preco);
 		//
-		friend std::ostream& operator<< (std::ostream &o, Produto const &t); 
+		friend std::ostream& operator<< (std::ostream &o, Produto const &p);
+		
 		
 		double operator+(const Produto& p) const;
 		double operator-(const Produto& p) const;

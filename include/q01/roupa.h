@@ -19,7 +19,7 @@ class Roupa : public Produto{
 		 * @brief	Construtores e Destrutor
 		*/
 		Roupa();
-		Roupa(std::string _codigo, std::string _descricao, short _preco, std::string _marca,
+		Roupa(std::string _codigo, std::string _descricao, double _preco, std::string _marca,
 			bool _sexo, short _tamanho);
 		~Roupa();
 
