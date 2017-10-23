@@ -1,0 +1,6 @@
+
+	1- Fruta é uma classe filha de produto;
+	2- Produto tem um método virtual puro (do tipo ostream) chamado print (O que o torna uma classe abstrata);
+	3- Produto sobrecarrega o opegador de inserção chamando o metodo print;
+	4- Como fruta é uma classe filha de produto, ela é obrigada a implementar o método print;
+	5- Logo, toda vida que o programa tentar imprimir um produto chamando o operador de inserção (<<), este irá chamar o método print da classe filha em questão. No caso fruta, por isso que imprime fruta.
