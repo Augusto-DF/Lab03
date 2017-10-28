@@ -15,12 +15,12 @@ class Agencia{
 		int newConta(shared_ptr<Conta_corrente> kt); //Sobrecarga do método
 		int listContas();
 
-		int deleteConta();
-		void saque();
-		void depositos();
-		void printSaldo();
-		void extrato();
-		void transferencia();
+		int deleteConta(int aux);
+		void saque(int aux);
+		void depositos(int aux);
+		void printSaldo(int aux);
+		void extrato(int aux);
+		void transferencia(int aux, int aux2);
 };
 
 #endif

@@ -15,8 +15,8 @@ class Conta_corrente{
 	private:
 		string agencia;
 		string numero;
-		double saldo;
 		bool status;
+		double saldo;
 		double limite;
 		double limite_disponivel;
 		std::vector<shared_ptr<Movimentacoes>> listMov;

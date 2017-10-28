@@ -73,6 +73,14 @@ Conta_corrente::addMov(std::string mdescricao, double mvalor, bool mcred_deb){
 }
 
 std::ostream& operator<<(std::ostream& o, Conta_corrente& c){
+	o << std::setfill(' ') << std::setw(7) << "Agencia" << " | "
+		<< std::setfill(' ') << std::setw(10) << "Numero" << " | "
+		<< std::setfill(' ') << std::setw(20) << "Saldo" << " | "
+		<< std::setfill(' ') << std::setw(12) << "Status" << " | "
+		<< std::setfill(' ') << std::setw(20) << "Limite" << " | "
+		<< std::setfill(' ') << std::setw(20) << "Limite Disponivel" << " | "
+		<< std::endl;
+	
 	o << std::setfill(' ') << std::setw(7) << c.getAgencia() << " | "
 		<< std::setfill(' ') << std::setw(10) << c.getNumero() << " | "
 		<< std::setfill('.') << std::setw(20) << c.getSaldo() << " | ";

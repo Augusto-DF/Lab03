@@ -26,49 +26,31 @@ Agencia::listContas(){
 	int cont = 0;
 
 	for(auto it(Banco.begin()); it!=Banco.end(); ++it){
-		std::cout << cont << " - | Agencia: " << (**it).getAgencia() << " | Conta: " << (**it).getNumero() << std::endl;
+		std::cout << "Índice: "<< cont << ": " << (**it) << std::endl;
 		++cont;
 	}
-
-	std::cout << std::setfill(' ') << std::setw(7) << "Agencia" << " | "
-		<< std::setfill(' ') << std::setw(10) << "Numero" << " | "
-		<< std::setfill(' ') << std::setw(20) << "Saldo" << " | "
-		<< std::setfill(' ') << std::setw(12) << "Status" << " | "
-		<< std::setfill(' ') << std::setw(20) << "Limite" << " | "
-		<< std::setfill(' ') << std::setw(20) << "Limite Disponivel" << " | "
-		<< std::endl;
 	return 1;
 }		
 int
-Agencia::deleteConta(){	
-	int cont;
+Agencia::deleteConta(int aux){	
 	char q;
 
 	std::cout << "Deseja deletar uma conta? s - Sim " ;
 	std::cin >> q;
 	if(q == 's'){
-		listContas();
-		std::cout << "Escolha o indice da conta que deseja apagar: ";
-		std::cin >> cont;
-
-		Banco.erase((Banco.begin() + cont));
+		Banco.erase((Banco.begin() + aux));
 	}else{
 		return 1;
 	}
-	listContas();
 	return 1;
 }
 
 void
-Agencia::saque(){
-	listContas();
+Agencia::saque(int aux){
 
 	auto it = Banco.begin();
-	int aux;
+	
 	double kt;
-
-	std::cout << "===SAQUE===\nEscolha o índice da conta: ";
-	std::cin >> aux;
 
 	std::cout << (**(it+aux)) << std::endl;
 
@@ -79,6 +61,7 @@ Agencia::saque(){
 		std::cout << "Valor inválido tente novamente: ";
 		std::cin >> kt;
 	}
+
 	kt = (**(it + aux)).getSaldo() - kt;
 
 	(**(it + aux)).setSaldo(kt);
@@ -91,19 +74,14 @@ Agencia::saque(){
 }
 
 void
-Agencia::depositos(){
-	listContas();
+Agencia::depositos(int aux){
 
 	auto it = Banco.begin();
-	int aux;
+	
 	double kt;
 
-	std::cout << "===DEPOSITO===\nEscolha o índice da conta: ";
-	std::cin >> aux;
-
 	std::cout << (**(it+aux)) << std::endl;
-
-	std::cout << (**(it+aux)) << std::endl;
+	
 	std::string mdes = "Deposito";
 
 	std::cout << "Qual o valor do deposito? ";
@@ -123,28 +101,18 @@ Agencia::depositos(){
 }
 
 void
-Agencia::printSaldo(){
-	listContas();
+Agencia::printSaldo(int aux){
 
 	auto it = Banco.begin();
-	int aux;
-
-	std::cout << "===VER SALDO===\nEscolha o índice da conta: ";
-	std::cin >> aux;
 	
 	std::cout << "O saldo da conta é: " << (**(it+aux)).getSaldo();
 	std::cout << std::endl;
 }
 
 void
-Agencia::extrato(){
-	listContas();
+Agencia::extrato(int aux){
 
 	auto it = Banco.begin();
-	int aux;
-
-	std::cout << "===EXTRATO===\nEscolha o índice da conta: ";
-	std::cin >> aux;
 
 	(**(it+aux)).List_movimentacoes();
 
@@ -152,20 +120,11 @@ Agencia::extrato(){
 }
 		
 void
-Agencia::transferencia(){
-
-	listContas();
+Agencia::transferencia(int aux, int aux2){
 
 	auto it = Banco.begin();
-	int aux, aux2;
-
-	std::cout << "===TRANSFERENCIA===\nEscolha o índice da primeira conta: ";
-	std::cin >> aux;
 
 	std::cout << (**(it+aux)) << std::endl;
-
-	std::cout << "Escolha o índice da segunda conta: ";
-	std::cin >> aux2;
 
 	std::cout << (**(it+aux2)) << std::endl;
 
